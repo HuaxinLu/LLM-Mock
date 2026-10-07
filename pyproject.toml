@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-mock"
+version = "0.1.0"
+description = "LLM Mock：本地监听的 LLM 请求录制 / 回放代理（OpenAI 兼容，支持精准、模糊、位置回放与混合模式）"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+llm-mock = "llm_mock.cli:main"
+
+[tool.setuptools]
+packages = ["llm_mock"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

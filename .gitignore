@@ -1,0 +1,34 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# ---- 测试缓存 ----
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---- 录制库：里面是 LLM 交互原文，可能含业务数据/敏感内容，绝不入库 ----
+*.jsonl
+*.jsonl.gz
+llm_mock_records.jsonl
+records/
+cassettes/
+
+# ---- 密钥与凭据 ----
+*.key
+*.pem
+*.p12
+.env
+.env.*
+secrets/
+
+# ---- 编辑器/系统 ----
+.idea/
+.vscode/
+.DS_Store
+*.swp
